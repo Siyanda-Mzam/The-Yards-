@@ -42,7 +42,8 @@ body{
 .header{
 	position: absolute;
 	top: calc(50% - 35px);
-	left: calc(50% - 430px);
+
+	left: calc(50% - 490px);
 	z-index: 2;
 }
 
@@ -53,7 +54,10 @@ body{
 	font-size: 35px;
 	font-weight: 200;
 }
-
+h3 {
+	font-family: 'Exo', sans-serif !important;
+	margin-left:140px !important;
+}
 .header div span{
 	color: #2cefaa !important;
 	display: inline-block
