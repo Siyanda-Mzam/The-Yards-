@@ -1,3 +1,5 @@
+'use strict'
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -30,8 +32,11 @@ app.use(express.static(path.join(__dirname, '/public/')));
 
 app.use('/', index);
 app.use('/home', index);
+app.use('/staff', index);
 app.use('/logout', index);
+app.use('/tenants', index);
 app.use('/applications', index);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
