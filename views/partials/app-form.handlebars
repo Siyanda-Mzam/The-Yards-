@@ -1,9 +1,8 @@
-
 <link rel="stylesheet" href="stylesheets/app-form.css">
-<script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <form>
-    <h1>Leasing Application Form</h1>
-    <!--
+  <h1>Leasing Application Form</h1>
+  <!--
         The Idea of having a title included in the application form is kind of a problem
         because there is a ton of titles out there that we could account for.
   <select>
@@ -11,49 +10,53 @@
       <option>Mrs</option>
   </select>-->
   <div id="personal_details">
-  <h2 class="select">Personal Details</h2>
-  <input placeholder="First Name (In Full)" type="text" required>
-  <input  placeholder="Surname" type="text" required>
-  <input placeholder="Nationality" type="text" required>
-  <input placeholder="South African ID or Passport Number" type="text" required>
+    <h2 class="select">Personal Details</h2>
+    <input placeholder="First Name (In Full)" type="text" required>
+    <input placeholder="Surname" type="text" required>
+    <input placeholder="Nationality" type="text" required>
+    <input placeholder="South African ID or Passport Number" type="text" required>
   </div>
+
   <div id="residence_details">
-  <h2 class="select">Current Residence Details</h2>
-  <input placeholder="Town, Suburb or Township" type="text" required>
-  <input  placeholder="Street Name, Extension or Zone" type="text" required>
-  <input placeholder="House Number" type="text" required>
-  </div> 
+    <h2 class="select">Current Residence Details</h2>
+    <input placeholder="Town, Suburb or Township" type="text" required>
+    <input placeholder="Street Name, Extension or Zone" type="text" required>
+    <input placeholder="House Number" type="text" required>
+  </div>
+
   <div id="education_details">
-  <h2 class="select">Education Details</h2>
-  <input placeholder="Study Institution" type="text" required>
-  <input  placeholder="Student Number" type="text" required>
-  <input placeholder="Year of Study" type="text" required>
+    <h2 class="select">Education Details</h2>
+    <input placeholder="Study Institution" type="text" required>
+    <input placeholder="Student Number" type="text" required>
+    <input placeholder="Year of Study" type="text" required>
   </div>
 
   <div id="contact_details">
-  <h2 class="select">Contact Details</h2>
-  <input placeholder="Mobile Number" type="text" required>
-  <input  placeholder="Telephone Number" type="text" required>
-  <input placeholder="Email" type="email" required>
+    <h2 class="select">Contact Details</h2>
+    <input placeholder="Mobile Number" type="text" required>
+    <input placeholder="Telephone Number" type="text" required>
+    <input placeholder="Email" type="email" required>
   </div>
+
   <div id="residence_type_and_choice">
-  <h2 class="select">Residence of Choice and Room Type</h2>
-  <select class="select">
+    <h2 class="select">Residence of Choice and Room Type</h2>
+    <select class="select">
       <option>81 Rissik Street</option>
       <option>126 Siemert</option>
       <option>Dunvista</option>
       <option>Wynton Joy</option>
       <option selected="selected" disabled="disabled">Residence of Choice</option>
   </select>
-  <select class="select">
+    <select class="select">
       <option>Single</option>
       <option>Sharing</option>
       <option selected="selected" disabled="disabled">Room Type</option>
   </select>
   </div>
+
   <div id="payment_options">
-  <h2 class="select">Payment Options</h2>
-  <select onchange="poption(this)" id="payment_select" class="select">
+    <h2 class="select">Payment Options</h2>
+    <select onchange="poption(this)" id="payment_select" class="select">
       <option value="cash">Cash</option>
       <option value="nsfas">NSFAS</option>
       <option value="other">Other</option>
@@ -61,19 +64,19 @@
   </select>
   </div>
 
-   <div id="nsfas_form">
-  <h2 class="select">NSFAS Details</h2>
-  <input placeholder="First Name (In Full)" type="text" required>
-  <input  placeholder="Surname" type="text" required>
-  <input placeholder="Nationality" type="text" required>
-  <input placeholder="South African ID or Passport Number" type="text" required>
+  <div id="nsfas_form">
+    <h2 class="select">NSFAS Details</h2>
+    <input placeholder="First Name (In Full)" type="text" required>
+    <input placeholder="Surname" type="text" required>
+    <input placeholder="Nationality" type="text" required>
+    <input placeholder="South African ID or Passport Number" type="text" required>
   </div>
   <div id="cash_form">
-  <h2 class="select">Cash Payment Details</h2>
-  <input placeholder="Bank Name" type="text" required>
-  <input  placeholder="Branch Number" type="text" required>
-  <input placeholder="Account Number" type="text" required>
-  <input placeholder="Card Number" type="text" required>
+    <h2 class="select">Cash Payment Details</h2>
+    <input placeholder="Bank Name" type="text" required>
+    <input placeholder="Branch Number" type="text" required>
+    <input placeholder="Account Number" type="text" required>
+    <input placeholder="Card Number" type="text" required>
   </div>
   <button id="done">Submit Application</button>
   <button id="continue">Continue</button>
