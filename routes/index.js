@@ -3,6 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
+  //alert("You have clicked here");
+  //console.log("You have clicked here");
   res.render('partials/login');
 });
 router.post('/', function(req, res) {

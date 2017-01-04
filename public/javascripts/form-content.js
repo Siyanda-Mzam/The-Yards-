@@ -13,33 +13,37 @@ $("#cash_form").addClass("fade");
 $("#done").addClass("fade");
 $('#continue').click(function (e) {
     e.preventDefault();
-    if (i == 1) {
-        $("#go_back").removeClass("fade");
-        $("#personal_details").addClass("fade");
-        $("#education_details").removeClass("fade");
+    switch (i) {
+        case 1: $("#go_back").removeClass("fade");
+            $("#personal_details").addClass("fade");
+            $("#education_details").removeClass("fade");
+            break;
+
+        case 2: $("#education_details").addClass("fade");
+            $("#contact_details").removeClass("fade");
+            break;
+
+        case 3: $("#contact_details").addClass("fade");
+            $("#residence_type_and_choice").removeClass("fade");
+            break;
+
+        case 4: $("#residence_type_and_choice").addClass("fade");
+            $("#payment_options").removeClass("fade");
+            if (cache) {
+                var str = "#" + cache + "_form";
+                $(str).removeClass("fade");
+
+            }
+            break;
+        default: break;
     }
-    else if (i == 2) {
-        $("#education_details").addClass("fade");
-        $("#contact_details").removeClass("fade");
-    }
-    else if (i == 3) {
-        $("#contact_details").addClass("fade");
-        $("#residence_type_and_choice").removeClass("fade");
-    }
-    else if (i == 4) {
-        $("#residence_type_and_choice").addClass("fade");
-        $("#payment_options").removeClass("fade");
-        if (cache) {
-            var str = "#" + cache + "_form";
-            $(str).removeClass("fade");
-        }
-        $("#continue").addClass("fade");
-        $("#done").removeClass("fade");
-    }
+
+    console.log("In Continue, I is: %s", i);
     if (i <= 4)
         i++;
 });
 $('#go_back').click(function (e) {
+    console.log("This is the element that was received by Id: %s", document.getElementById("personal_details"));
     e.preventDefault();
     $("#continue").removeClass("fade");
     $("#done").addClass("fade");
@@ -65,6 +69,7 @@ $('#go_back').click(function (e) {
     if (i == 1) {
         $("#go_back").addClass("fade");
     }
+    console.log("In Go Back, I is: " + i);
 });
 
 function poption(val) {
